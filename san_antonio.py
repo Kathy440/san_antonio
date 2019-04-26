@@ -32,7 +32,7 @@ def get_random_quote():
 
 def get_random_item_in(my_list):
     # TODO: get a random number
-    item = my_list[4] # get a quote from a list
+    item = my_list[0] # get a quote from a list
     return item # return the item
 
 # Programm
