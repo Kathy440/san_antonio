@@ -11,6 +11,7 @@ quotes = [
 characters = [
     "alvin et les Chipmunks",
     "Babar",
+    "Simba",
     "betty boop",
     "calimero",
     "casper",
@@ -20,9 +21,9 @@ characters = [
 ]
 
 def message(character, quote):
-    n_character = character.capitalize()
-    n_quote = quote.capitalize()
-    return "{} a dit : {}".format(n_character, n_quote)
+    name_character = character.capitalize()
+    name_quote = quote.capitalize()
+    return "{} a dit : {}".format(name_character, name_quote)
 
 def get_random_quote():
     # get a random number
