@@ -15,12 +15,12 @@ quotes = [
 # Load all the data contained in my file.data = entries -> charger toute les donnée contenu dans ce fichier
 # add each item in my list -> chaque éléments va être stocker dans la new list
 # return my completed list -> renvoye la liste fini
-def read_value_from_json():
+def read_value_from_json(file, key):
       values = []
-      with open('characters.json') as f:
-        data = json.load(f)
-        for entry in data:
-              values.append(entry['character'])
+      with open(file) as f:
+          data = json.load(f)
+          for entry in data:
+              values.append(entry[key])
       return values
 
 def get_random_item(my_list):
@@ -29,7 +29,7 @@ def get_random_item(my_list):
       return item
 
 def random_character():
-      all_values = read_value_from_json()
+      all_values = read_value_from_json('characters.json', 'character')
       return get_random_item(all_values)
 
 def capitalize(words):
